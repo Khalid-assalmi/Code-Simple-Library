@@ -66,6 +66,8 @@ const data = await srv.get("https://example.com");
 ### 4. دالة التأخير المدمجة: `debounce(fn, deley)`
 يتم استدعاؤها عندما تتطلب معالجة البيانات الانتظار حتى تكون القيم جاهزة بحالة كانت المدخلات تتغير باستمرار مثل احداث الإدخال، حيث لا تقوم بتشغيل الدالة المحجوزة داخلها إلا بعد ثبات القيم لمدة معينة تحددها أثناء استدعاء الدالة وتكتب هكذا:
 ```javascript
+import { debounce } from "./code-simple";
+
 $("inp").oninput = () => debounce(function, deley);
 ```
 
@@ -74,6 +76,8 @@ $("inp").oninput = () => debounce(function, deley);
 ### 5. دالة العشوائية الآمنة: `getRandom(array)`
 توفر دالة `getRandom()` في مكتبة **Code Simple** عشوائية حقيقية وآمنة عبر التعامل مع عشوائية النظام الفعلية التي تجعل العشوائية في الأمور الحساسة أكثر أماناً وعشوائية ، وتستخدم مع المصفوفات وترجع الكائن نفسه، ويتم استعمالها في الكود هكذا:
 ```javascript
+import { getRandom } from "./code-simple";
+
 const numbers = [1, 2, 3, 4, 5];
 const num = getRandom(numbers);
 console.log(num) // يطبع عنصر عشوائي من المصفوفة
